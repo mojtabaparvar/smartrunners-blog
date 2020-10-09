@@ -9,12 +9,6 @@
     "timestamps": true
   },
   "attributes": {
-    "title": {
-      "type": "richtext"
-    },
-    "subtitle": {
-      "type": "richtext"
-    },
     "content": {
       "type": "richtext"
     },
@@ -39,6 +33,23 @@
       "collection": "category",
       "via": "articles",
       "dominant": true
+    },
+    "title": {
+      "type": "string",
+      "required": true,
+      "unique": true
+    },
+    "subtitle": {
+      "type": "string",
+      "required": true,
+      "default": "this is the subtitle"
+    },
+    "author": {
+      "plugin": "users-permissions",
+      "model": "user"
+    },
+    "likes": {
+      "type": "integer"
     }
   }
 }
